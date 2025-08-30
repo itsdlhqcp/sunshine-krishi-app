@@ -1,4 +1,7 @@
 # Sunshine Krishi App
+<img width="1643" height="805" alt="Screenshot 2025-08-30 214112" src="https://github.com/user-attachments/assets/5c919399-18a8-40c5-8c26-f31c24b991ae" />
+
+<img width="1757" height="761" alt="Screenshot 2025-08-30 214047" src="https://github.com/user-attachments/assets/124ebd33-c34b-4592-a1f9-f078a2bebe8a" />
 
 ## Introduction
 
