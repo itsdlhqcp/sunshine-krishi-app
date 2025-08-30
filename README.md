@@ -1,20 +1,3 @@
-# sunshine_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
 # Sunshine Krishi App
 
 ## Introduction
@@ -202,26 +185,219 @@ AnimatedSkyBackground ← InsightsWidget ← VisualizationWidget ← SunshinePro
 ## Getting Started
 
 ### Prerequisites
-- Flutter SDK
-- Dart programming language
 - Internet connection for data fetching
+- Operating System: Windows, macOS, or Linux
+- Minimum 2GB RAM (4GB recommended)
+- 10GB free disk space
 
-### Dependencies
+### Flutter Installation
+
+#### For Windows
+1. **Download Flutter SDK**
+   ```bash
+   # Download from https://docs.flutter.dev/get-started/install/windows
+   # Or use Git
+   git clone https://github.com/flutter/flutter.git -b stable
+   ```
+
+2. **Set up Environment Variables**
+   - Add Flutter to your PATH: `C:\path\to\flutter\bin`
+   - Verify installation: `flutter doctor`
+
+3. **Install Android Studio**
+   - Download from https://developer.android.com/studio
+   - Install Android SDK and AVD (Android Virtual Device)
+
+#### For macOS
+1. **Download Flutter SDK**
+   ```bash
+   # Using Git
+   git clone https://github.com/flutter/flutter.git -b stable
+   
+   # Or download zip from https://docs.flutter.dev/get-started/install/macos
+   ```
+
+2. **Set up PATH**
+   ```bash
+   # Add to ~/.zshrc or ~/.bash_profile
+   export PATH="$PATH:`pwd`/flutter/bin"
+   source ~/.zshrc
+   ```
+
+3. **Install Xcode** (for iOS development)
+   ```bash
+   # Install from App Store or Apple Developer
+   sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+   sudo xcodebuild -runFirstLaunch
+   ```
+
+#### For Linux
+1. **Download and Extract Flutter**
+   ```bash
+   # Download Flutter SDK
+   wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.0-stable.tar.xz
+   tar xf flutter_linux_3.16.0-stable.tar.xz
+   ```
+
+2. **Update PATH**
+   ```bash
+   # Add to ~/.bashrc
+   export PATH="$PATH:/path/to/flutter/bin"
+   source ~/.bashrc
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   sudo apt-get update
+   sudo apt-get install curl git unzip xz-utils zip libglu1-mesa
+   ```
+
+### Verify Flutter Installation
+```bash
+flutter doctor
+```
+This command checks your environment and displays a report of the status of your Flutter installation.
+
+### Project Dependencies
 ```yaml
 dependencies:
   flutter:
     sdk: flutter
-  http: ^latest_version
-  provider: ^latest_version
-  fl_chart: ^latest_version
-  intl: ^latest_version
+  http: ^1.1.0
+  provider: ^6.1.1
+  fl_chart: ^0.65.0
+  intl: ^0.18.1
+  shimmer: ^3.0.0
 ```
 
-### Installation
-1. Clone the repository
-2. Run `flutter pub get` to install dependencies
-3. Ensure backend server connectivity
-4. Run `flutter run` to start the application
+### Installation and Running
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/sunshine-krishi-app.git
+   cd sunshine-krishi-app
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Check Connected Devices**
+   ```bash
+   flutter devices
+   ```
+
+4. **Run the Application**
+   
+   **For Android:**
+   ```bash
+   # Run on connected Android device
+   flutter run
+   
+   # Run on specific device
+   flutter run -d <device-id>
+   
+   # Build APK
+   flutter build apk
+   ```
+   
+   **For iOS (macOS only):**
+   ```bash
+   # Run on iOS simulator
+   flutter run -d ios
+   
+   # Build for iOS
+   flutter build ios
+   ```
+   
+   **For Web:**
+   ```bash
+   # Run on web browser
+   flutter run -d chrome
+   
+   # Build for web
+   flutter build web
+   ```
+   
+   **For Desktop:**
+   ```bash
+   # Windows
+   flutter run -d windows
+   flutter build windows
+   
+   # macOS
+   flutter run -d macos
+   flutter build macos
+   
+   # Linux
+   flutter run -d linux
+   flutter build linux
+   ```
+
+### Development Setup
+
+1. **Enable Developer Options** (Android)
+   - Go to Settings > About Phone
+   - Tap Build Number 7 times
+   - Enable USB Debugging in Developer Options
+
+2. **Set up IDE**
+   
+   **Android Studio:**
+   - Install Flutter and Dart plugins
+   - Import the project
+   - Run using the green play button
+   
+   **VS Code:**
+   ```bash
+   # Install Flutter extension
+   code --install-extension Dart-Code.flutter
+   ```
+
+3. **Hot Reload During Development**
+   ```bash
+   # Press 'r' in terminal for hot reload
+   # Press 'R' for hot restart
+   # Press 'q' to quit
+   ```
+
+### Troubleshooting Common Issues
+
+1. **Flutter Doctor Issues**
+   ```bash
+   # Accept Android licenses
+   flutter doctor --android-licenses
+   
+   # Fix cmdline-tools
+   flutter doctor
+   ```
+
+2. **Gradle Build Issues**
+   ```bash
+   # Clean and rebuild
+   flutter clean
+   flutter pub get
+   flutter run
+   ```
+
+3. **iOS Simulator Issues**
+   ```bash
+   # Open iOS Simulator
+   open -a Simulator
+   
+   # List available simulators
+   xcrun simctl list devices
+   ```
+
+4. **Web CORS Issues**
+   - Run with `--web-renderer html` for better compatibility
+   ```bash
+   flutter run -d chrome --web-renderer html
+   ```
+
+### Backend Server
+Ensure the backend server is running at `https://sunshine-backend-0qhd.onrender.com` for proper data fetching. The app will display error messages if the server is unavailable.
 
 ## Usage Examples
 
