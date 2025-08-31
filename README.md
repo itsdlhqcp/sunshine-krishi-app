@@ -1,3 +1,5 @@
+Demo video – try this video as other one has low quality – download and play https://drive.google.com/file/d/1QE0QReQ8LkOBXUcaH9bT3vDmTHiS3FGu/view?usp=drivesdk
+
 # Sunshine Krishi App
 <img width="1643" height="805" alt="Screenshot 2025-08-30 214112" src="https://github.com/user-attachments/assets/5c919399-18a8-40c5-8c26-f31c24b991ae" />
 
